@@ -1,0 +1,1151 @@
+@PREAMBLE{"
+\def\st{$^{\textrm{\scriptsize st}}$} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\nd{$^{\textrm{\scriptsize nd}}$} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\rd{$^{\textrm{\scriptsize rd}}$} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\th{$^{\textrm{\scriptsize th}}$} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\er{$^{\textrm{\scriptsize er}}$} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\ere{$^{\textrm{\scriptsize \`ere}}$} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\eme{$^{\textrm{\scriptsize \`eme}}$} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%BEGIN LATEX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\@ifundefined{home}{\gdef\home#1{\protect\raisebox{-.3ex}{\char`~}#1}}{}
+\@ifundefined{ifl}{\gdef\ifl#1#2{#2}}{} % Language (English by default)
+\@ifundefined{ifv}{\gdef\ifv#1{}}{} % Verbose (non-verbose by default)
+\makeatother %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%END LATEX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%HEVEA\def\ifv#1{} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%HEVEA\def\p@b{http://www-rocq.inria.fr/\home{acohen}/publications}
+%HEVEA\def\r@p{http://www-rocq.inria.fr/\home{acohen}/research.html#reports}
+%HEVEA\def\publink#1{\\\ahref{\p@b/#1}%
+%HEVEA{\emph{\ifl{T\'el\'echarger}{Download}}}}
+%HEVEA\def\r@port{\emph{\ifl{Rapport de Recherche}{Research Report}}}
+%HEVEA\def\rrlink{\\\ahref{\r@p}{\r@port}~\ifl{disponible}{available}}
+"}
+
+@STRING{springer = "Springer-Verlag"}
+@STRING{addison = "Addison-Wesley"}
+@STRING{wiley = "John Wiley and Sons"}
+@STRING{mcgh = "McGraw-Hill"}
+
+@STRING{prism = "Laboratoire PRiSM"}
+@STRING{uvsq = "Universit\'e de Versailles, France"}
+
+@STRING{rocq = "INRIA Rocquencourt, France"}
+@STRING{futurs = "INRIA Futurs, France"}
+
+@STRING{lip = "Laboratoire de l'Informatique du Parall\'elisme"}
+@STRING{ensl = "\'Ecole Normale Sup\'erieure de Lyon (ENS Lyon), France"}
+
+@STRING{igm = "Institut Gaspard Monge"}
+@STRING{umlv = "Universit\'e de Marne-la-Vall\'ee, France"}
+
+@STRING{irisa = "Institut de Recherche en Informatique et Syst\`emes Al\'eatoires"}
+@STRING{cbur = "Universit\'e de Rennes, France"}
+
+@STRING{ibp = "Institut Blaise Pascal"}
+@STRING{upmc = "Universit\'e Pierre et Marie Curie (Paris 6), France"}
+
+@STRING{lri = "Laboratoire de Recherche en Informatique"}
+@STRING{ups = "Universit\'e Paris Sud 11, France"}
+
+@STRING{ensmp = "\'Ecole Nationale Sup\'erieure des Mines de Paris (ENSMP),
+                 France"}
+
+@STRING{polytechnique = "\'Ecole Polytechnique, France"}
+
+@STRING{ltci = "Laboratoire Traitement et Communication de l'Information"}
+@STRING{enst = "\'Ecole Nationale Sup\'erieure des T\'el\'ecommunications (ENST),
+                Paris, France"}
+
+@STRING{csrd = "CSRD"}
+@STRING{uiuc = "University of Illinois at Urbana-Champaign, USA"}
+
+@STRING{tsi = "Technique et science informatiques"}
+@STRING{renpar = "Rencontres francophones du parall\'elisme"}
+
+@STRING{ppl = "Parallel Processing Letters"}
+@STRING{jpdc = "J. of Parallel and Distributed Computing"}
+@STRING{ijpp = "Intl. J. of Parallel Programming"}
+@STRING{ieee = "IEEE Computer Society"}
+@STRING{ieeetpds = "IEEE Trans. on Parallel and Distributed Systems"}
+@STRING{ieeetc = "IEEE Trans. on Computers"}
+@STRING{ieeetse = "IEEE Trans. on Software Engineering"}
+@STRING{toplas = "ACM Trans. on Programming Languages and Systems"}
+@STRING{lncs = "LNCS"}
+@STRING{pc = "Parallel Computing"}
+@STRING{tjos = "J. of Supercomputing"}
+@STRING{tcs = "Theoretical Computer Science"}
+@STRING{jacm = "J. of the ACM"}
+@STRING{hipeac = "Intl. Conf. on High Performance and Embedded
+                  Architectures and Compilers"}
+@STRING{hipeacj = "Trans. on High Performance Embedded
+                  Architectures and Compilers"}
+@STRING{ics = "Intl.\ Conf. on Supercomputing"}
+@STRING{isca = "Intl.\ Symp. on Computer Architecture"}
+@STRING{asplos = "Symp.\ on Architectural Support for
+                  Programming Languages and Operating Systems"}
+@STRING{ppopp = "Symp.\ on Principles and Practice of Parallel Programming"}
+@STRING{pldi = "Symp.\ on Programming Language Design and Implementation"}
+@STRING{popl = "Symp.\ on Principles of Programming Languages"}
+@STRING{oopsla = "Conf.\ on Object-Oriented Programming Systems,
+                  Languages and Applications"}
+@STRING{cc = "Intl.\ Conf.\ on Compiler Construction"}
+@STRING{cgo = "Intl.\ Symp.\ on Code Generation and Optimization"}
+@STRING{javagrande = "Java Grande Conference"}
+@STRING{pact = "Parallel Architectures and Compilation Techniques"}
+@STRING{sas = "Intl.\ Symp.\ on Static Analysis"}
+@STRING{lcpc = "Languages and Compilers for Parallel Computing"}
+@STRING{cpc = "Workshop on Compilers for Parallel Computers"}
+
+
+@inproceedings{Palix:asplos11,
+  title = {Faults in {Linux}: Ten Years Later},
+  author = {Nicolas Palix and Ga\"l Thomas and Suman Saha and
+    Christophe Calv\`es and Julia Lawall and Gilles Muller},
+  booktitle = {Sixteenth International Conference on Architectural Support
+    for Programming Languages and Operating Systems (ASPLOS 2011)},
+  address = {Newport Beach, CA, USA},
+  month = mar,
+  year = 2011,
+  pages = {305--318}
+}
+
+@inproceedings{Saha:LCTES2011,
+  author    = {Suman Saha and
+               Julia L. Lawall andnco
+               Gilles Muller},
+  title     = {An approach to improving the structure of error-handling
+               code in the {Linux} kernel},
+  booktitle = {Proceedings of the ACM SIGPLAN/SIGBED 2011 conference on
+               Languages, compilers, and tools for embedded systems, LCTES
+               2011},
+  year      = {2011},
+  pages     = {41--50},
+  address = {Chicago, IL, USA},
+  month = apr
+}
+
+@inproceedings{Saha:PLOS11,
+  title = {Finding Resource-Release Omission Faults in {Linux}},
+  author = {Suman Saha and Julia Lawall and Gilles Muller},
+  booktitle = {6th Workshop on Programming Languages and Operating Systems
+(PLOS 2011)},
+  year = 2011,
+  month = oct,
+  address = {Cascais, Portugal}
+}
+
+julia
+
+@techreport{Cretin-Remy:coercions@inria2011,
+  hal_id = {inria-00582570},
+  off = {http://hal.inria.fr/inria-00582570/en/},
+  title = {{E}xtending {S}ystem {F}-eta with {A}bstraction over
+  {E}rasable {C}oercions},
+  author = {Cretin, Julien and R{\'e}my, Didier},
+  abstract = {{E}rasable coercions in {S}ystem {F}-eta, also known as
+  retyping functions, are well-typed eta-expansions of the identity. {T}hey
+  may change the type of terms without changing their behavior and can thus
+  be erased before reduction.  Coercions in {F}-eta can model subtyping of
+  known types and some displacement of quantifiers, but not subtyping
+  assumptions nor certain form of delayed type instantiation. We generalize
+  F-eta by allowing abstraction over retyping functions. We follow a general
+  approach where computing with coercions can be seen as computing in the
+  lambda-calculus but keeping track of which parts of terms are
+  coercions. We obtain a language where coercions do not contribute to the
+  reduction but may block it and are thus not erasable. We recover erasable
+  coercions by choosing a weak reduction strategy and restricting coercion
+  abstraction to value-forms or by restricting abstraction to coercions that
+  are polymorphic in their domain or codomain. The latter variant subsumes
+  {F}-eta, {F}-sub, and {MLF} in a unified framework.},
+  language = {{E}nglish},
+  affiliation = {{GALLIUM} - {INRIA} {R}ocquencourt - {INRIA} },
+  pages = {64},
+  type = {{R}esearch {R}eport},
+  institution = {INRIA},
+  number = {{RR}-7587},
+  month = jul,
+  year = {2011},
+  also = {http://gallium.inria.fr/~remy/coercions/},
+  pdf = {http://hal.inria.fr/inria-00582570/PDF/full.pdf}
+}
+
+@article{Remy-Yakobowski@jfp2011:xmlf,
+  author = {R{\'e}my, Didier and Yakobowski, Boris},
+  title = {A Church-Style Intermediate Language for {MLF}},
+  journal = {Theoretical Computer Science},
+  year = {2011},
+  optvolume = {},
+  optnumber = {},
+  optpages = {},
+  optmonth = {},
+  note = {Accepted for publication},
+  category = {A},
+  abstract = {MLF is a type system that seamlessly merges ML-style implicit but
+  second-class polymorphism with System-F explicit first-class
+  polymorphism. We present xMLF, a Church-style version of MLF with full type
+  information that can easily be maintained during reduction. All parameters
+  of functions are explicitly typed and both type abstraction and type
+  instantiation are explicit. However, type instantiation in xMLF is more
+  general than type application in System F. We equip xMLF with a small-step
+  reduction semantics that allows reduction in any context and show that this
+  relation is confluent and type preserving. We also show that both subject
+  reduction and progress hold for weak-reduction strategies, including
+  call-by-value with the value-restriction.}
+}
+
+@article{scp2010-evolution,
+  author = {Di Cosmo, Roberto and Di Ruscio, Davide and Patrizio Pelliccione and Alfonso Pierantonio and Stefano Zacchiroli},
+  title = {Supporting Software Evolution in Component-Based FOSS Systems},
+  abstract = {FOSS (Free and Open Source Software) systems present interesting challenges in system evolution. On one hand, most FOSS systems are based on very fine-grained units of soft- ware deployment—called packages—which promote system evolution; on the other hand, FOSS systems are among the largest software systems known and require sophisticated static and dynamic conditions to be verified, in order to successfully deploy upgrades on user machines. The slightest error in one of these conditions can turn a routine upgrade into a system administrator nightmare. In this paper we introduce a model-based approach to support the upgrade of FOSS systems. The approach promotes the simulation of upgrades to predict failures before affecting the real system. Both fine-grained static aspects (e.g. configuration incoher- ences) and dynamic aspects (e.g. the execution of configuration scripts) are taken into account, improving over the state of the art of upgrade planners. The effectiveness of the approach is validated by instantiating the approach to widely-used FOSS distributions.},
+  year = {2011},
+  doi = {10.1016/j.scico.2010.11.001},
+  pages = {1144-1160},
+  journal = {Science of Computer Programming},
+}
+
+@inproceedings{cbse2011-mpm,
+  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {MPM: a modular package manager},
+  abstract = {Software distributions in the FOSS world rely on so-called package managers for the installation and removal of packages on target machines. State-of-the-art package managers are monolithic in architecture, and each of them is hard-wired to an ad-hoc dependency solver implementing a customized heuristics. In this paper we propose a modular architecture allowing for pluggable dependency solvers and backends. We argue that this is the path that leads to the next generation of package managers that will deliver better results, accept more expressive input languages, and can be easily adaptable to new platforms. We present a working prototype—called MPM—which has been implemented following the design advocated in this paper.},
+  publisher = {ACM},
+  year = {2011},
+  isbn = {978-1-4503-0723-9},
+  doi = {10.1145/2000229.2000255},
+  pages = {179-188},
+  booktitle = {CBSE 2011: 14th International ACM SIGSOFT Symposium on Component Based Software Engineering},
+}
+
+@inproceedings{splc2010-fd-deps,
+  author = {Di Cosmo, Roberto and Stefano Zacchiroli},
+  title = {Feature Diagrams as Package Dependencies},
+  abstract = {FOSS (Free and Open Source Software) distributions use dependencies and package managers to maintain huge collections of packages and their installations; recent research have led to efficient and complete configuration tools and techniques, based on state of the art solvers, that are being adopted in industry. We show how to encode a significant subset of Free Feature Diagrams as interdependent packages, enabling to reuse package tools and research results into software product lines.},
+  publisher = {Springer-Verlag},
+  year = {2010},
+  isbn = {978-3-642-15578-9},
+  doi = {10.1007/978-3-642-15579-6_40},
+  booktitle = {SPLC 2010: 14th International Software Product Line Conference},
+}
+
+@inproceedings{lococo2011-conflicts,
+  author = {Artho, Cyrille Valentin and Di Cosmo, Roberto and Kuniyasu Suzaki and Stefano Zacchiroli},
+  title = {Sources of Inter-package Conflicts in Debian},
+  abstract = {Inter-package conflicts require the presence of two or more packages in a particular configuration, and thus tend to be harder to detect and localize than conventional (intra-package) defects. Hundreds of such inter-package conflicts go undetected by the normal testing and distribution process until they are later reported by a user. The reason for this is that current meta-data is not fine-grained and accurate enough to cover all common types of conflicts. A case study of inter-package conflicts in Debian has shown that with more detailed package meta-data, at least one third of all package conflicts could be prevented relatively easily, while another one third could be found by targeted testing of packages that share common resources or characteristics. This paper reports the case study and proposes ideas to detect inter-package conflicts in the future.},
+  year = {2011},
+  booktitle = {LoCoCo 2011 International Workshop on Logics for Component Configuration},
+}
+
+@article{studia11-dh-ocaml,
+  author = {Mehdi Dogguy and Stéphane Glondu and Le Gall, Sylvain and Stefano Zacchiroli},
+  title = {Enforcing Type-Safe Linking using Inter-Package Relationships},
+  abstract = {Strongly-typed languages rely on link-time checks to ensure that type safety is not violated at the borders of compilation units. Such checks entail very fine-grained dependencies among compilation units, which are at odds with the implicit assumption of backward compatibility that is relied upon by common library packaging techniques adopted by FOSS (Free and Open Source Software) package-based distributions. As a consequence, package managers are often unable to prevent users to install a set of libraries which cannot be linked together. We discuss how to guarantee link-time compatibility using inter-package relationships; in doing so, we take into account real-life maintainability problems such as support for automatic package rebuild and manageability of ABI (Application Binary Interface) strings by humans. We present the dh_ocaml implementation of the proposed solution, which is currently in use in the Debian distribution to safely deploy more than 300 OCaml-related packages.},
+  year = {2011},
+  journal = {Studia Informatica Universalis},
+}
+
+@article {springerlink:10.1007/s10817-011-9230-5,
+   author = {Vouillon, J\'er\^ome},
+   title = {A Solution to the POPLMARK Challenge Based on de Bruijn Indices},
+   journal = {Journal of Automated Reasoning},
+   publisher = {Springer Netherlands},
+   issn = {0168-7433},
+   keyword = {Computer Science},
+   pages = {1-36},
+   url = {http://dx.doi.org/10.1007/s10817-011-9230-5},
+}
+
+
+% /home/dicosmo/TeX/Bibliography/dicosmo.bib:
+@inproceedings{Predictions2011,
+ author = {Pietro Abate and Di Cosmo, Roberto},
+ title = {Predicting Upgrade Failures Using Dependency Analysis},
+ booktitle = {HotSWUP 2011: Hot topics in Software Updates},
+ year = {2011},
+ DMI-CATEGORY = {autc},
+ publisher = {ACM},
+ doi = {http://dx.doi.org/10.1109/ICDEW.2011.5767626},
+ ee = {http://dx.doi.org/10.1109/ICDEW.2011.5767626},
+ pages     = {145-150},
+ crossref  = {DBLP:conf/icde/2011w},
+ bibsource = {DBLP, http://dblp.uni-trier.de},
+ DMI-CATEGORY = {autc},
+ }
+
+% /home/dicosmo/TeX/Bibliography/dicosmo.bib:
+@inproceedings{AlignedUpgrades2011,
+  author    = {Di Cosmo, Roberto and Olivier Lhomme and Claude Michel},
+  title     = {Aligning component upgrades},
+  booktitle = {Lococo},
+  year      = {2011},
+  pages     = {1-11},
+  ee        = {10.4204/EPTCS.65.1},
+  crossref  = {DBLP:journals/corr/abs-1108-6097},
+  abstract  = {    Modern software systems, like GNU/Linux distributions or Eclipse-based
+    development environment, are often deployed by selecting components out of
+    large component repositories. Maintaining such software systems by
+    performing component upgrades is a complex task, and the users need to have
+    an expressive preferences language at their disposal to specify the kind of
+    upgrades they are interested in. Recent research has shown that it is
+    possible to develop solvers that handle preferences expressed as a
+    combination of a few basic criteria used in the MISC competition, ranging
+    from the number of new components to the freshness of the final
+    configuration. In this work we introduce a set of new criteria that allow
+    the users to specify their preferences for solutions with components aligned
+    to the same upstream sources, provide an efficient encoding and report on
+    the experimental results that prove that optimising these alignment criteria
+    is a tractable problem in practice.}
+}
+
+% /home/dicosmo/TeX/Bibliography/dicosmo.bib:
+@article{DBLP:journals/corr/abs-1108-6097,
+  author    = {Conrad Drescher and
+               In{\^e}s Lynce and
+               Ralf Treinen},
+  title     = {Proceedings Second Workshop on Logics for Component Configuration},
+  journal   = {EPTCS},
+  volume    = {65},
+  year      = {2011},
+  ee        = {http://arxiv.org/abs/1108.6097},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+% /home/dicosmo/TeX/Bibliography/dicosmo.bib:
+@inproceedings{DBLP:conf/sigsoft/CosmoV11,
+  author    = {Roberto Di Cosmo and
+               J{\'e}r{\^o}me Vouillon},
+  title     = {On software component co-installability},
+  booktitle = {SIGSOFT FSE},
+  year      = {2011},
+  pages     = {256-266},
+  ee        = {http://doi.acm.org/10.1145/2025113.2025149},
+  crossref  = {DBLP:conf/sigsoft/2011},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+% /home/dicosmo/TeX/Bibliography/dicosmo.bib:
+@proceedings{DBLP:conf/sigsoft/2011,
+  editor    = {Tibor Gyim{\'o}thy and
+               Andreas Zeller},
+  title     = {SIGSOFT/FSE'11 19th ACM SIGSOFT Symposium on the Foundations
+               of Software Engineering (FSE-19) and ESEC'11: 13rd European
+               Software Engineering Conference (ESEC-13), Szeged, Hungary,
+               September 5-9, 2011},
+  booktitle = {SIGSOFT FSE},
+  publisher = {ACM},
+  year      = {2011},
+  isbn      = {978-1-4503-0443-6},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+% /home/dicosmo/TeX/Bibliography/dicosmo.bib:
+@proceedings{DBLP:conf/icde/2011w,
+  editor    = {Serge Abiteboul and
+               Klemens B{\"o}hm and
+               Christoph Koch and
+               Kian-Lee Tan},
+  title     = {Workshops Proceedings of the 27th International Conference
+               on Data Engineering, ICDE 2011, April 11-16, 2011, Hannover,
+               Germany},
+  booktitle = {ICDE Workshops},
+  publisher = {IEEE},
+  year      = {2011},
+  isbn      = {978-1-4244-9194-0},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{SEFM2011,
+ author = {Boender, Jaap},
+ title = {Efficient Computation of Dominance in Component Systems},
+ booktitle = {Proceedings of SEFM 2011},
+ year = {2011},
+ location = {Montevideo, Urugyay},
+}
+@InProceedings{Hal11b,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Sean Halle and Albert Cohen},
+  title =        {A Mutable Hardware Abstraction to Replace Threads},
+  booktitle = lcpc # { (LCPC'11)},
+  year =      2011,
+  series =    lncs,
+  address =   {Fort Collins, Colorado},
+  month =     sep,
+  publisher = springer
+}
+
+@InProceedings{Ver11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Sven Verdoolaege and Albert Cohen and Anna Beletska},
+  title =        {Transitive Closures of Affine Integer Tuple Relations
+                  and their Overapproximations},
+  booktitle =    sas # { (SAS'11)},
+  year =         2011,
+  address =      {Venice, Italy},
+  month =        sep,
+  series =       lncs,
+  publisher =    springer
+}
+
+@InProceedings{Bac11b,
+  x-teams =      {alchemy},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Mounira Bachir and Frederic Brault and
+                  Sid-Ahmed-Ali Touati and Albert Cohen},
+  title =        {Loop Unrolling Minimisation in the
+                  Presence of Multiple Register
+                  Types: a Viable Alternative to Modulo Variable Expansion},
+  booktitle =    {High Performance Computing and Simulation Conference
+                  (HPCS 2011)},
+  year =         2011,
+  address =      {Istanbul, Turkey},
+  month =        jul
+}
+
+@Article{Mun11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Harm Munk and Eduard Ayguad\'e
+                  and C\'edric Bastoul
+                  and Paul Carpenter and Zbigniew Chamski
+                  and Albert Cohen and Marco Cornero
+                  and Philippe Dumont and Marc Duranton
+                  and Mohammed Fellahi and Roger Ferrer
+                  and Razya Ladelsky and Menno Lindwer
+                  and Xavier Martorell and Cupertino Miranda
+                  and Dorit Nuzman and Andrea Ornstein
+                  and Antoniu Pop and Sebastian Pop
+                  and Louis-No\"el Pouchet
+                  and Alex Ram\'irez and David R\'odenas
+                  and Erven Rohou and Ira Rosen
+                  and Uzi Shvadron and Konrad Trifunovi\'c and Ayal Zaks},
+  title =        {ACOTES Project: Advanced Compiler Technologies
+                  for Embedded Streaming},
+  journal =      ijpp,
+  publisher =    springer,
+  year =         2011,
+  volume =       39,
+  number =       3,
+  month =        jun,
+  pages =        {397--450},
+  note =         {Special issue on European HiPEAC
+                  network of excellence member's projects}
+}
+
+@InProceedings{Coh11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {no},
+  x-international-audience = {yes},
+  x-invited-conference = {yes},
+  author = 	 {A. Cohen},
+  title = 	 {Polyhedral Compilation Runs Out of (Static) Control!},
+  booktitle = 	 {Taiwan Compiler workshop (CTHPC'11)},
+  year =	 2011,
+  address =	 {Taipei, Taiwan},
+  month =	 jun,
+  note =         {Keynote presentation}
+}
+
+@InProceedings{Par11,
+  x-teams =      {alchemy},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Eunjung Park and Louis-No\"el Pouchet and John Cavazos
+                  and Albert Cohen and P. Saddayapan},
+  title =        {Predictive Modeling in a Polyhedral Optimization Space},
+  booktitle =    cgo # { (CGO'11)},
+  year =         2011,
+  address =      {Chamonix, France},
+  month =        apr
+}
+
+@InProceedings{Dys11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Sergei Dyshel and Dorit Nuzman and Erven Rohou and Ira Rosen
+                  and Kevin Williams and David Yuste
+                  and Albert Cohen and Ayal Zaks},
+  title =        {Vapor SIMD -- Auto-Vectorize Once, Run Everywhere},
+  booktitle =    cgo # { (CGO'11)},
+  year =         2011,
+  address =      {Chamonix, France},
+  month =        apr
+}
+
+@InProceedings{Hal11,
+  x-teams =      {alchemy},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {S. Halle and A. Cohen},
+  title =        {Support of Collective Effort Towards Performance Portability},
+  booktitle =    {3\rd\ USENIX Workshop on Hot Topics in Parallelism
+                  (HotPar'11)},
+  year =         2011,
+  month =        jun,
+  note =         {5 pages and poster}
+}
+
+@InProceedings{Upa11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Ramakrishna Upadrasta and Albert Cohen},
+  title =        {Exploring the use of Sub-Polyhedra in the Polyhedral Model:
+                  A TVPI Based Approach},
+  booktitle =    {1\st\ Workshop on Polyhedral Compilation Techniques
+                  (IMPACT'11, associated with CGO)},
+  year =         2011,
+  address =      {Chamonix, France},
+  month =        apr
+}
+
+@InProceedings{Bac11,
+  x-teams =      {alchemy},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {M. Bachir and S.-A.-A. Touati and A. Cohen},
+  title =        {Decomposing Meeting Graph Circuits to
+                  Minimise Kernel Loop Unrolling},
+  booktitle =    {9\th\ Workshop on Optimizations for DSP and
+                  Embedded Systems (ODES'11, associated with CGO)},
+  year =         2011,
+  address =      {Chamonix, France},
+  month =        apr
+}
+
+@InProceedings{Li11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Feng Li and Antoniu Pop and Albert Cohen},
+  title =        {Extending Loop Distribution to PS-DSWP},
+  booktitle =    {1\st\ Workshop on Intermediate Representations
+                  (WIR'11, associated with CGO)},
+  year =         2011,
+  address =      {Chamonix, France},
+  month =        apr
+}
+
+@InProceedings{Tri11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Konrad Trifunovi\'c and Albert Cohen and Razya Ladelski
+                  and Feng Li},
+  title =        {Elimination of Memory-Based Dependences for Loop-Nest
+                  Optimization and Parallelization: Evaluation of a
+                  Revised Violated Dependence Analysis Method on a
+                  Three-Address Code Polyhedral Compiler},
+  booktitle =    {3\rd\ GCC Research Opportunities Workshop
+                  (GROW'11, associated with CGO)},
+  year =         2011,
+  address =      {Chamonix, France},
+  month =        apr
+}
+
+@InProceedings{Pou11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Louis-No\"el Pouchet and Uday Bondhugula
+                  and C\'edric Bastoul and Albert Cohen
+                  and J. Ramanujam and P. Sadayappan and Nicolas Vasilache},
+  title =        {Loop Transformations: Convexity, Pruning and Optimization},
+  booktitle = 	 {38\th\ } # popl # { (POPL'11)},
+  year =         2011,
+  address =      {Austin, Texas},
+  month =        jan
+}
+
+@InProceedings{Pop11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Antoniu Pop and Albert Cohen},
+  title =        {A Stream-Computing Extension to {OpenMP}},
+  booktitle = 	 hipeac # { (HiPEAC'11)},
+  year =         2011,
+  month =        jan
+}
+
+@InProceedings{Roh11,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Erven Rohou and Kevin Williams and Sergei Dyshel and
+                  Dorit Nuzman and Ira Rosen and Albert Cohen and Ayal Zaks},
+  title =        {Speculatively Vectorized Bytecode},
+  booktitle = 	 hipeac # { (HiPEAC'11)},
+  year =         2011,
+  month =        jan
+}
+
+@InProceedings{Pou10,
+  x-teams =      {alchemy},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author = 	 {Louis-No\"el Pouchet and Uday Bondhugula
+                  and C\'edric Bastoul and Albert Cohen
+                  and J. Ramanujam and P. Sadayappan},
+  title = 	 {Combined Iterative and Model-driven
+                  Optimization in an Automatic Parallelization Framework},
+  booktitle = 	 {ACM Supercomputing Conf.\ (SC'10)},
+  year =	 2010,
+  address =      {New Orleans, Lousiana},
+  month =        nov,
+  note =         {11 pages}
+}
+
+@InProceedings{Mir10b,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Cupertino Miranda and Antoniu Pop and Philippe Dumont
+                  and Albert Cohen and Marc Duranton},
+  title =        {Erbium: A Deterministic, Concurrent Intermediate
+                  Representation to Map Data-Flow Tasks to Scalable,
+                  Persistent Streaming Processes},
+  booktitle =    {Intl.\ Conf.\ on Compilers Architectures and
+                  Synthesis for Embedded Systems (CASES'10)},
+  year =         2010,
+  month =        oct
+}
+
+@InProceedings{Nam10,
+  x-teams =      {alchemy},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author =       {Mircea Namolaru and Albert Cohen and
+                  Grigori Fursin and Ayal Zaks and Ari Freund},
+  title =        {Practical Aggregation of Semantical Program Properties for
+                  Machine Learning Based Optimization},
+  booktitle =    {Intl.\ Conf.\ on Compilers Architectures and
+                  Synthesis for Embedded Systems (CASES'10)},
+  year =         2010,
+  month =        oct
+}
+
+@InProceedings{Tri10,
+  x-teams =      {parkas},
+  x-editorial-board = {yes},
+  x-proceedings = {yes},
+  x-international-audience = {yes},
+  author = 	 {Konrad Trifunovi\'c and Albert Cohen},
+  title = 	 {Enabling more optimizations in {GRAPHITE}:
+                  ignoring memory-based dependences},
+  booktitle = 	 {Proc. of the 8\th\ GCC Developper's Summit},
+  year =	 2010,
+  address =	 {Ottawa, Ontario},
+  month =	 oct
+}
+@inproceedings{cbse2012-futures,
+  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {Learning from the Future of Component Repositories},
+  abstract = {An important aspect of the quality assurance of large component repositories is the logical coherence of component metadata. We argue that it is possible to identify certain classes of such problems by checking relevant properties of the possible future repositories into which the current repository may evolve. In order to make a complete analysis of all possible futures effective however, one needs a way to construct a finite set of representatives of this infinite set of potential futures. We define a class of properties for which this can be done. We illustrate the practical usefulness of the approach with two quality assurance applications: (i) establishing the amount of "forced upgrades" induced by introducing new versions of existing components in a repository, and (ii) identifying outdated components that need to be upgraded in order to ever be installable in the future. For both applications we provide experience reports obtained on the Debian distribution.},
+  dmi-category = "intc",
+  year = {2012},
+  booktitle = {CBSE 2012: 15th International ACM SIGSOFT Symposium on Component Based Software Engineering},
+}
+
+@article{infsof2012-mpm,
+  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {A Modular Package Manager Architecture},
+  abstract = {The success of modern software distributions in the Free and Open Source world can be explained, among other factors, by the availability of a large collection of software packages and the possibility to easily install and remove those components using state of the art package managers. However, package managers are often built using a monolithic architecture and hard-wired and ad-hoc dependency solvers implementing some customized heuristics. In this paper we propose a modular architecture relying on precise interface formalisms that allows the system administrator to choose from a variety of dependency solvers and backends. We argue that this is the path that leads to the next generation of package managers that will deliver better results, offer more expressive preference languages, and be easily adaptable to new platforms. We have built a working prototype—called MPM—following the design advocated in this paper, and we show how it largely outperforms a variety of state of the art package managers.},
+  volume    = {55},
+  number    = {2},
+  year      = {2013},
+  pages     = {459-474},
+  ee        = {http://dx.doi.org/10.1016/j.infsof.2012.09.002},
+  doi = {10.1016/j.infsof.2012.09.002},
+  journal = {Information and Software Technology},
+  dmi-category = "jour",
+}
+
+@article{jss2012-concern,
+  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {Dependency Solving: a Separate Concern in Component Evolution Management},
+  abstract = {Maintenance of component-based software platforms often has to face rapid evolution of software components. Component dependencies, conflicts, and package managers with dependency solving capabilities are the key ingredients of prevalent software maintenance technologies that have been proposed to keep software installations synchronized with evolving component repositories. We review state-of-the-art package managers and their ability to keep up with evolution at the current growth rate of popular component-based platforms, and conclude that their dependency solving abilities are not up to the task. We show that the complexity of the underlying upgrade planning problem is NP-complete even for seemingly simple component models, and argue that the principal source of complexity lies in multiple available versions of components. We then discuss the need of expressive languages for user preferences, which makes the problem even more challenging. We propose to establish dependency solving as a separate concern from other upgrade aspects, and present CUDF as a formalism to describe upgrade scenarios. By analyzing the result of an international dependency solving competition, we provide evidence that the proposed approach is viable.},
+  month = {October},
+  year = {2012},
+  issn = {0164-1212},
+  doi = {10.1016/j.jss.2012.02.018},
+  pages = {2228-2240},
+  volume = {85},
+  journal = {Journal of Systems and Software},
+  dmi-category = "jour",
+}
+
+@inproceedings{sefm2012-aeolus,
+  author = {Di Cosmo, Roberto and Stefano Zacchiroli and Zavattaro, Gianluigi},
+  title = {Towards a Formal Component Model for the Cloud},
+  abstract = {We consider the problem of deploying and (re)configuring resources in a "cloud" setting, where interconnected software components and services can be deployed on clusters of heterogeneous (virtual) machines that can be created and connected on-the-fly. We introduce the Aeolus component model to capture similar scenarii from realistic cloud deployments, and instrument automated planning of day-to-day activities such as software upgrade planning, service deployment, elastic scaling, etc. We formalize the model and characterize the feasibility and complexity of configuration achievability in Aeolus.},
+  publisher = {Springer-Verlag},
+  year = {2012},
+  doi = {10.1007/978-3-642-33826-7_11},
+  pages = {156-171},
+  series = {LNCS},
+  volume = {7504},
+  booktitle = {SEFM 2012: 10th International Conference on Software Engineering and Formal Methods},
+  dmi-category = "intc",
+}
+
+@inproceedings{DBLP:conf/icse/TianLL12,
+  author    = {Yuan Tian and
+               Julia L. Lawall and
+               David Lo},
+  title     = {Identifying Linux bug fixing patches},
+  booktitle = {ICSE},
+  year      = {2012},
+  pages     = {386-396},
+  ee        = {http://dx.doi.org/10.1109/ICSE.2012.6227176},
+  crossref  = {DBLP:conf/icse/2012},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  dmi-category = "intc"
+}
+
+@proceedings{DBLP:conf/icse/2012,
+  editor    = {Martin Glinz and
+               Gail C. Murphy and
+               Mauro Pezz{\`e}},
+  title     = {34th International Conference on Software Engineering, ICSE
+               2012, June 2-9, 2012, Zurich, Switzerland},
+  booktitle = {ICSE},
+  publisher = {IEEE},
+  year      = {2012},
+  isbn      = {978-1-4673-1067-3},
+  ee        = {http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6218989},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{Bissyande:ASE12,
+  title = {Diagnosys: Automatic Generation of a Debugging Interface to the
+     {L}inux kernel},
+  author = {Tegawend\'e F. Bissyand\'e and Laurent R\'eveill\`ere and
+     Julia Lawall and Gilles Muller},
+  booktitle = {ASE},
+  address = {Essen, Germany},
+  month = sep,
+  year = 2012,
+  pages = {60--69},
+  dmi-category = "intc",
+}
+
+@inproceedings{Andersen:ASE12,
+  title = {Semantic Patch Inference},
+  author = {Jesper Andersen and Anh Cuong Nguyen and David Lo and
+    Julia L. Lawall and Siau-Cheng Khoo},
+  booktitle = {ASE},
+  address = {Essen, Germany},
+  month = sep,
+  year = 2012,
+  pages = {382--385},
+  dmi-category = "intc",
+}
+
+@Unpublished{garrigue-remy:gadts-ambivalence@ml2012,
+  author =       {Jacques Garrigue and Didier R{\'e}my},
+  title =        {Tracing ambiguity in GADT type inference},
+  note =         {Talk given at ACM SIGPLAN Workshop in Copenaghen}, 
+  month =     sep,
+  year =      2012,
+  url = "http://www.lexifi.com/ml2012/",
+  dmi-category = "talk"
+}
+
+@Unpublished{scherer-remy:gadts-subtyping@ml2012,
+  author =       {Gabriel Scherer and Didier R{\'e}my},
+  title =        {GADT meet subtyping},
+  note =         {Talk given at ACM SIGPLAN Workshop in Copenaghen}, 
+  month =     sep,
+  year =      2012,
+  url = "http://www.lexifi.com/ml2012/",
+  dmi-category = "talk"
+}
+
+@inproceedings{DBLP:conf/icfp/HenryMCM12,
+  author    = {Gr{\'e}goire Henry and
+               Michel Mauny and
+               Emmanuel Chailloux and
+               Pascal Manoury},
+  title     = {Typing unmarshalling without marshalling types},
+  booktitle = {International Conference on Functional Programming},
+  year      = {2012},
+  pages     = {287-298},
+  ee        = {http://doi.acm.org/10.1145/2364527.2364569},
+  publisher = {ACM},
+  isbn      = {978-1-4503-1054-3},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{LIP69095,
+                    author = {Chailloux, Emmanuel and Serpette, Bernard},
+               x-lip6teams = {APR},
+                  x-lip6id = {9095},
+  x-international-audience = {no},
+                     month = jan,
+                     title = {{S}\'eparation des couleurs dans un lambda-calcul bichrome},
+                 booktitle = {{J}ourn\'ees {F}rancophones des {L}angages {A}pplicatifs},
+                      year = {2012},
+                     pages = {1-12},
+                       url = {http://hal.inria.fr/docs/00/66/59/58/PDF/paper_8.pdf},
+                  abstract = {Dans cet article nous introduisons un λ-calcul bichrome pour expliciter une partie de l'{\'{e}}valuation d'un terme en pr{\'{e}}cisant la localit{\'{e}} du calcul1. L'int{\'{e}}r{\^{e}}t est alors de pouvoir d{\'{e}}finir une transformation, par β-expansion, qui regroupe les expressions de m{\^{e}}me couleur. Les propri{\'{e}}t{\'{e}}s de correction, de terminaison et de confluence de cette transformation sont d{\'{e}}montr{\'{e}}es 'a l'aide de l'assistant de preuves Coq. Cette transformation est ind{\'{e}}pendante de la s{\'{e}}mantique de communication et de synchronisation de l'application. On s'int{\'{e}}resse alors aux applications utilisant deux unit{\'{e}}s de calcul comme les couples client-serveur de la programmation Web. Nous abordons le passage {\`{a}} un λ-calcul {\`{a}} plus de deux couleurs et montrons les difficult{\'{e}}s que cela engendre.}
+}
+
+@inproceedings{LIP69092,
+                    author = {Canou, Benjamin and Chailloux, Emmanuel and Vouillon, J{\'{e}}r{\^{o}}me},
+               x-lip6teams = {APR},
+                  x-lip6id = {9092},
+  x-international-audience = {yes},
+                     month = may,
+                     title = {{H}ow to {R}un your {F}avorite {L}anguage in {W}eb {B}rowsers},
+                 booktitle = {{I}nternational {W}orld {W}ide {W}eb {C}onference, dev track},
+                      year = {2012},
+                     pages = {1-4}
+}
+
+    
+@article{DBLP:journals/procedia/DaneluttoC12,
+  author    = {Marco Danelutto and
+               Roberto Di Cosmo},
+  title     = {A "Minimal Disruption" Skeleton Experiment: Seamless Map
+               {\&} Reduce Embedding in OCaml},
+  journal   = {Procedia CS},
+  volume    = {9},
+  year      = {2012},
+  pages     = {1837-1846},
+  ee        = {http://dx.doi.org/10.1016/j.procs.2012.04.202},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{DBLP:conf/msr/ArthoSCTZ12,
+  author    = {Cyrille Artho and
+               Kuniyasu Suzaki and
+               Roberto Di Cosmo and
+               Ralf Treinen and
+               Stefano Zacchiroli},
+  title     = {Why do software packages conflict?},
+  booktitle = {MSR},
+  year      = {2012},
+  pages     = {141-150},
+  ee        = {http://dx.doi.org/10.1109/MSR.2012.6224274},
+  crossref  = {DBLP:conf/msr/2012},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@proceedings{DBLP:conf/msr/2012,
+  editor    = {Michele Lanza and
+               Massimiliano Di Penta and
+               Tao Xi},
+  title     = {9th IEEE Working Conference on Mining Software Repositories,
+               MSR 2012, June 2-3, 2012, Zurich, Switzerland},
+  booktitle = {MSR},
+  publisher = {IEEE},
+  year      = {2012},
+  isbn      = {978-1-4673-1761-0},
+  ee        = {http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6220358},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{balat:hal-00691710,
+
+hal_id = {hal-00691710},
+
+url = {http://hal.archives-ouvertes.fr/hal-00691710},
+
+title = {{Client-server Web applications with Ocsigen}},
+
+author = {Balat, Vincent and Chambart, Pierre and Henry, Gr{\'e}goire},
+
+abstract = {{The Ocsigen framework offers a new way to develop sophisticated
+client-server Web applications. It makes it possible to write as a single
+program both the server and client sides of a Web application, thus simplifying
+a lot communications and data transfers, and avoiding code duplications. It
+also proposes a wide set of high level concepts to program traditional Web
+interactions in a very concise way while mixing them seamlessly with client
+side features. The use of a powerful type system improves a lot the reliability
+of programs, reducing debugging time, and making the code easier to
+maintain.}},
+
+keywords = {Web interaction, services, Continuation-based Web programming,
+Ajax, Javascript},
+
+language = {Anglais},
+
+affiliation = {Preuves, Programmes et Syst{\`e}mes - PPS},
+
+booktitle = {{WWW2012 dev track proceedings}},
+
+pages = {59},
+
+address = {Lyon, France},
+
+audience = {internationale },
+
+year = {2012},
+
+month = Apr,
+
+pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
+
+}    @InProceedings{MPZN13,                                                                                               
+  author = {Morisset, Robin and Pawan, Pankaj and Zappa Nardelli, Francesco},                                        
+  title = {Compiler testing via a theory of sound optimisations in the {C}11/{C}++11 memory model},                  
+  booktitle = {Proc.\ PLDI},                                                                                         
+  year = {2013},                                                                                                     
+  publisher = {ACM}                                                                                                  
+} 
+@inproceedings{cbse2012-futures,
+  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {Learning from the Future of Component Repositories},
+  abstract = {An important aspect of the quality assurance of large component repositories is the logical coherence of component metadata. We argue that it is possible to identify certain classes of such problems by checking relevant properties of the possible future repositories into which the current repository may evolve. In order to make a complete analysis of all possible futures effective however, one needs a way to construct a finite set of representatives of this infinite set of potential futures. We define a class of properties for which this can be done. We illustrate the practical usefulness of the approach with two quality assurance applications: (i) establishing the amount of "forced upgrades" induced by introducing new versions of existing components in a repository, and (ii) identifying outdated components that need to be upgraded in order to ever be installable in the future. For both applications we provide experience reports obtained on the Debian distribution.},
+  dmi-category = "intc",
+  year = {2012},
+  booktitle = {CBSE 2012: 15th International ACM SIGSOFT Symposium on Component Based Software Engineering},
+}
+
+@article{infsof2012-mpm,
+  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {A Modular Package Manager Architecture},
+  abstract = {The success of modern software distributions in the Free and Open Source world can be explained, among other factors, by the availability of a large collection of software packages and the possibility to easily install and remove those components using state of the art package managers. However, package managers are often built using a monolithic architecture and hard-wired and ad-hoc dependency solvers implementing some customized heuristics. In this paper we propose a modular architecture relying on precise interface formalisms that allows the system administrator to choose from a variety of dependency solvers and backends. We argue that this is the path that leads to the next generation of package managers that will deliver better results, offer more expressive preference languages, and be easily adaptable to new platforms. We have built a working prototype—called MPM—following the design advocated in this paper, and we show how it largely outperforms a variety of state of the art package managers.},
+  year = {2012},
+  doi = {10.1016/j.infsof.2012.09.002},
+  journal = {Information and Software Technology},
+  dmi-category = "jour",
+}
+
+@article{jss2012-concern,
+  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {Dependency Solving: a Separate Concern in Component Evolution Management},
+  abstract = {Maintenance of component-based software platforms often has to face rapid evolution of software components. Component dependencies, conflicts, and package managers with dependency solving capabilities are the key ingredients of prevalent software maintenance technologies that have been proposed to keep software installations synchronized with evolving component repositories. We review state-of-the-art package managers and their ability to keep up with evolution at the current growth rate of popular component-based platforms, and conclude that their dependency solving abilities are not up to the task. We show that the complexity of the underlying upgrade planning problem is NP-complete even for seemingly simple component models, and argue that the principal source of complexity lies in multiple available versions of components. We then discuss the need of expressive languages for user preferences, which makes the problem even more challenging. We propose to establish dependency solving as a separate concern from other upgrade aspects, and present CUDF as a formalism to describe upgrade scenarios. By analyzing the result of an international dependency solving competition, we provide evidence that the proposed approach is viable.},
+  month = {October},
+  year = {2012},
+  issn = {0164-1212},
+  doi = {10.1016/j.jss.2012.02.018},
+  pages = {2228-2240},
+  volume = {85},
+  journal = {Journal of Systems and Software},
+  dmi-category = "jour",
+}
+
+@inproceedings{sefm2012-aeolus,
+  author = {Di Cosmo, Roberto and Stefano Zacchiroli and Zavattaro, Gianluigi},
+  title = {Towards a Formal Component Model for the Cloud},
+  abstract = {We consider the problem of deploying and (re)configuring resources in a "cloud" setting, where interconnected software components and services can be deployed on clusters of heterogeneous (virtual) machines that can be created and connected on-the-fly. We introduce the Aeolus component model to capture similar scenarii from realistic cloud deployments, and instrument automated planning of day-to-day activities such as software upgrade planning, service deployment, elastic scaling, etc. We formalize the model and characterize the feasibility and complexity of configuration achievability in Aeolus.},
+  publisher = {Springer-Verlag},
+  year = {2012},
+  doi = {10.1007/978-3-642-33826-7_11},
+  pages = {156-171},
+  series = {LNCS},
+  volume = {7504},
+  booktitle = {SEFM 2012: 10th International Conference on Software Engineering and Formal Methods},
+  dmi-category = "intc",
+}
+
+@inproceedings{DBLP:conf/icse/TianLL12,
+  author    = {Yuan Tian and
+               Julia L. Lawall and
+               David Lo},
+  title     = {Identifying Linux bug fixing patches},
+  booktitle = {ICSE},
+  year      = {2012},
+  pages     = {386--396},
+  month = jun,
+  address = {Zurich, Switzerland},
+  dmi-category = "intc",
+}
+
+@inproceedings{Bissyande:ASE12,
+  title = {Diagnosys: Automatic Generation of a Debugging Interface to the
+     Linux kernel},
+  author = {Tegawend\'e F. Bissyand\'e and Laurent R\'eveill\`ere and
+     Julia Lawall and Gilles Muller},
+  booktitle = {ASE},
+  address = {Essen, Germany},
+  month = sep,
+  year = 2012,
+  pages = {60--69},
+  dmi-category = "intc",
+}
+
+@inproceedings{Andersen:ASE12,
+  title = {Semantic Patch Inference},
+  author = {Jesper Andersen and Anh Cuong Nguyen and David Lo and
+    Julia L. Lawall and Siau-Cheng Khoo},
+  booktitle = {ASE},
+  address = {Essen, Germany},
+  month = sep,
+  year = 2012,
+  pages = {382--385},
+  dmi-category = "intc",
+}
+
+@Unpublished{garrigue-remy:gadts-ambivalence@ml2012,
+  author =       {Jacques Garrigue and Didier R{\'e}my},
+  title =        {Tracing ambiguity in GADT type inference},
+  note =         {Talk given at ACM SIGPLAN Workshop in Copenaghen}, 
+  month =     sep,
+  year =      2012,
+  url = "http://www.lexifi.com/ml2012/",
+  dmi-category = "talk"
+}
+
+@Unpublished{scherer-remy:gadts-subtyping@ml2012,
+  author =       {Gabriel Scherer and Didier R{\'e}my},
+  title =        {GADT meet subtyping},
+  note =         {Talk given at ACM SIGPLAN Workshop in Copenaghen}, 
+  month =     sep,
+  year =      2012,
+  url = "http://www.lexifi.com/ml2012/",
+  dmi-category = "talk"
+}
+
+@inproceedings{DBLP:conf/icfp/HenryMCM12,
+  author    = {Gr{\'e}goire Henry and
+               Michel Mauny and
+               Emmanuel Chailloux and
+               Pascal Manoury},
+  title     = {Typing unmarshalling without marshalling types},
+  booktitle = {International Conference on Functional Programming},
+  year      = {2012},
+  pages     = {287-298},
+  ee        = {http://doi.acm.org/10.1145/2364527.2364569},
+  publisher = {ACM},
+  isbn      = {978-1-4503-1054-3},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{LIP69095,
+                    author = {Chailloux, Emmanuel and Serpette, Bernard},
+               x-lip6teams = {APR},
+                  x-lip6id = {9095},
+  x-international-audience = {no},
+                     month = jan,
+                     title = {{S}\'eparation des couleurs dans un lambda-calcul bichrome},
+                 booktitle = {{J}ourn\'ees {F}rancophones des {L}angages {A}pplicatifs},
+                      year = {2012},
+                     pages = {1-12},
+                       url = {http://hal.inria.fr/docs/00/66/59/58/PDF/paper_8.pdf},
+                  abstract = {Dans cet article nous introduisons un λ-calcul bichrome pour expliciter une partie de l'{\'{e}}valuation d'un terme en pr{\'{e}}cisant la localit{\'{e}} du calcul1. L'int{\'{e}}r{\^{e}}t est alors de pouvoir d{\'{e}}finir une transformation, par β-expansion, qui regroupe les expressions de m{\^{e}}me couleur. Les propri{\'{e}}t{\'{e}}s de correction, de terminaison et de confluence de cette transformation sont d{\'{e}}montr{\'{e}}es 'a l'aide de l'assistant de preuves Coq. Cette transformation est ind{\'{e}}pendante de la s{\'{e}}mantique de communication et de synchronisation de l'application. On s'int{\'{e}}resse alors aux applications utilisant deux unit{\'{e}}s de calcul comme les couples client-serveur de la programmation Web. Nous abordons le passage {\`{a}} un λ-calcul {\`{a}} plus de deux couleurs et montrons les difficult{\'{e}}s que cela engendre.}
+}
+
+@inproceedings{LIP69092,
+                    author = {Canou, Benjamin and Chailloux, Emmanuel and Vouillon, J{\'{e}}r{\^{o}}me},
+               x-lip6teams = {APR},
+                  x-lip6id = {9092},
+  x-international-audience = {yes},
+                     month = may,
+                     title = {{H}ow to {R}un your {F}avorite {L}anguage in {W}eb {B}rowsers},
+                 booktitle = {{I}nternational {W}orld {W}ide {W}eb {C}onference, dev track},
+                      year = {2012},
+                     pages = {1-4}
+}
+
+    
+@article{DBLP:journals/procedia/DaneluttoC12,
+  author    = {Marco Danelutto and
+               Roberto Di Cosmo},
+  title     = {A "Minimal Disruption" Skeleton Experiment: Seamless Map
+               {\&} Reduce Embedding in OCaml},
+  journal   = {Procedia CS},
+  volume    = {9},
+  year      = {2012},
+  pages     = {1837-1846},
+  ee        = {http://dx.doi.org/10.1016/j.procs.2012.04.202},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{DBLP:conf/msr/ArthoSCTZ12,
+  author    = {Cyrille Artho and
+               Kuniyasu Suzaki and
+               Roberto Di Cosmo and
+               Ralf Treinen and
+               Stefano Zacchiroli},
+  title     = {Why do software packages conflict?},
+  booktitle = {MSR},
+  year      = {2012},
+  pages     = {141-150},
+  ee        = {http://dx.doi.org/10.1109/MSR.2012.6224274},
+  crossref  = {DBLP:conf/msr/2012},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@proceedings{DBLP:conf/msr/2012,
+  editor    = {Michele Lanza and
+               Massimiliano Di Penta and
+               Tao Xi},
+  title     = {9th IEEE Working Conference on Mining Software Repositories,
+               MSR 2012, June 2-3, 2012, Zurich, Switzerland},
+  booktitle = {MSR},
+  publisher = {IEEE},
+  year      = {2012},
+  isbn      = {978-1-4673-1761-0},
+  ee        = {http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6220358},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{balat:hal-00691710,
+
+hal_id = {hal-00691710},
+
+url = {http://hal.archives-ouvertes.fr/hal-00691710},
+
+title = {{Client-server Web applications with Ocsigen}},
+
+author = {Balat, Vincent and Chambart, Pierre and Henry, Gr{\'e}goire},
+
+abstract = {{The Ocsigen framework offers a new way to develop sophisticated
+client-server Web applications. It makes it possible to write as a single
+program both the server and client sides of a Web application, thus simplifying
+a lot communications and data transfers, and avoiding code duplications. It
+also proposes a wide set of high level concepts to program traditional Web
+interactions in a very concise way while mixing them seamlessly with client
+side features. The use of a powerful type system improves a lot the reliability
+of programs, reducing debugging time, and making the code easier to
+maintain.}},
+
+keywords = {Web interaction, services, Continuation-based Web programming,
+Ajax, Javascript},
+
+language = {Anglais},
+
+affiliation = {Preuves, Programmes et Syst{\`e}mes - PPS},
+
+booktitle = {{WWW2012 dev track proceedings}},
+
+pages = {59},
+
+address = {Lyon, France},
+
+audience = {internationale },
+
+year = {2012},
+
+month = Apr,
+
+pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
+
+}    
