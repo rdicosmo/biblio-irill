@@ -662,14 +662,6 @@ julia
   address =	 {Ottawa, Ontario},
   month =	 oct
 }
-@inproceedings{cbse2012-futures,
-  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
-  title = {Learning from the Future of Component Repositories},
-  abstract = {An important aspect of the quality assurance of large component repositories is the logical coherence of component metadata. We argue that it is possible to identify certain classes of such problems by checking relevant properties of the possible future repositories into which the current repository may evolve. In order to make a complete analysis of all possible futures effective however, one needs a way to construct a finite set of representatives of this infinite set of potential futures. We define a class of properties for which this can be done. We illustrate the practical usefulness of the approach with two quality assurance applications: (i) establishing the amount of "forced upgrades" induced by introducing new versions of existing components in a repository, and (ii) identifying outdated components that need to be upgraded in order to ever be installable in the future. For both applications we provide experience reports obtained on the Debian distribution.},
-  dmi-category = "intc",
-  year = {2012},
-  booktitle = {CBSE 2012: 15th International ACM SIGSOFT Symposium on Component Based Software Engineering},
-}
 
 @article{infsof2012-mpm,
   author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
@@ -1186,4 +1178,41 @@ pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
     journal = {Software: Practice and Experience},
     doi = {10.1002/spe.2187 },
     year = {2013},
+}
+
+@article{scp2013-futures,
+  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {Learning from the Future of Component Repositories},
+  abstract = {An important aspect of the quality assurance of large component repositories is to ensure the logical coherence of component metadata, and to this end one needs to identify incoherences as early as possible. Some relevant classes of problems can be formulated in term of properties of the future repositories into which the current repository may evolve. However, checking such properties on all possible future repositories requires a way to construct a finite representation of the infinite set of all potential futures. A class of properties for which this can be done is presented in this work. We illustrate the practical usefulness of the approach with two quality assurance applications: (i) establishing the amount of "forced upgrades" induced by introducing new versions of existing components in a repository, and (ii) identifying outdated components that are currently not installable and need to be upgraded in order to become installable again. For both applications we provide experience reports obtained on the Debian free software distribution.},
+  publisher = {Elsevier},
+  year = {2013},
+  issn = {0167-6423},
+  doi = {10.1016/j.scico.2013.06.007},
+  journal = {Science of Computer Programming},
+  note = {To appear}
+}
+
+@inproceedings{fmco2012-foss-components,
+  author = {Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
+  title = {Formal Aspects of Free and Open Source Software Components},
+  abstract = {Free and Open Source Software (FOSS) distributions are popular solutions to deploy and maintain software on server, desktop, and mobile computing equipment. The typical deployment method in the FOSS setting relies on software distributions as vendors, packages as independently deployable components, and package managers as upgrade tools. We review research results from the past decade that apply formal methods to the study of inter-component relationships in the FOSS context. We discuss how those results are being used to attack both issues faced by users, such as dealing with upgrade failures on target machines, and issues important to distributions such as quality assurance processes for repositories containing tens of thousands, rapidly evolving software packages.},
+  publisher = {Springer-Verlag},
+  year = {2013},
+  pages = {216-239},
+  series = {LNCS},
+  volume = {7866},
+  booktitle = {FMCO 2012: HATS International School on Formal Models for Components and Objects},
+}
+
+@inproceedings{icalp2013-aeolus,
+  author = {Di Cosmo, Roberto and Mauro, Jacopo and Stefano Zacchiroli and Zavattaro, Gianluigi},
+  title = {Component Reconfiguration in the Presence of Conflicts},
+  abstract = {Components are traditionally modeled as black-boxes equipped with interfaces that indicate provided/required ports and, often, also conflicts with other components that cannot coexist with them. In modern tools for automatic system management, components become grey-boxes that show relevant internal states and the possible actions that can be acted on the components to change such state during the deployment and reconfiguration phases. However, state-of-the-art tools in this field do not support a systematic management of conflicts. In this paper we investigate the impact of conflicts by precisely characterizing the increment of complexity on the reconfiguration problem.},
+  publisher = {Springer-Verlag},
+  year = {2013},
+  doi = {10.1007/978-3-642-39212-2_19},
+  pages = {187-198},
+  series = {LNCS},
+  volume = {7966},
+  booktitle = {ICALP 2013: 40th International Colloquium on Automata, Languages and Programming},
 }
