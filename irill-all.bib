@@ -97,7 +97,8 @@
 @STRING{sas = "Intl.\ Symp.\ on Static Analysis"}
 @STRING{lcpc = "Languages and Compilers for Parallel Computing"}
 @STRING{cpc = "Workshop on Compilers for Parallel Computers"}
-
+@STRING{taco = "ACM Transactions on Architecture and Code Optimization"}
+@string{iandc = "Information and Computation"}
 
 @inproceedings{Palix:asplos11,
   title = {Faults in {Linux}: Ten Years Later},
@@ -903,62 +904,6 @@ julia
   month =	 oct
 }
 
-@article{infsof2012-mpm,
-  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
-  title = {A Modular Package Manager Architecture},
-  abstract = {The success of modern software distributions in the Free and Open Source world can be explained, among other factors, by the availability of a large collection of software packages and the possibility to easily install and remove those components using state of the art package managers. However, package managers are often built using a monolithic architecture and hard-wired and ad-hoc dependency solvers implementing some customized heuristics. In this paper we propose a modular architecture relying on precise interface formalisms that allows the system administrator to choose from a variety of dependency solvers and backends. We argue that this is the path that leads to the next generation of package managers that will deliver better results, offer more expressive preference languages, and be easily adaptable to new platforms. We have built a working prototype—called MPM—following the design advocated in this paper, and we show how it largely outperforms a variety of state of the art package managers.},
-  volume    = {55},
-  number    = {2},
-  year      = {2013},
-  pages     = {459-474},
-  ee        = {http://dx.doi.org/10.1016/j.infsof.2012.09.002},
-  doi = {10.1016/j.infsof.2012.09.002},
-  journal = {Information and Software Technology},
-  dmi-category = "jour",
-}
-
-@article{jss2012-concern,
-  author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
-  title = {Dependency Solving: a Separate Concern in Component Evolution Management},
-  abstract = {Maintenance of component-based software platforms often has to face rapid evolution of software components. Component dependencies, conflicts, and package managers with dependency solving capabilities are the key ingredients of prevalent software maintenance technologies that have been proposed to keep software installations synchronized with evolving component repositories. We review state-of-the-art package managers and their ability to keep up with evolution at the current growth rate of popular component-based platforms, and conclude that their dependency solving abilities are not up to the task. We show that the complexity of the underlying upgrade planning problem is NP-complete even for seemingly simple component models, and argue that the principal source of complexity lies in multiple available versions of components. We then discuss the need of expressive languages for user preferences, which makes the problem even more challenging. We propose to establish dependency solving as a separate concern from other upgrade aspects, and present CUDF as a formalism to describe upgrade scenarios. By analyzing the result of an international dependency solving competition, we provide evidence that the proposed approach is viable.},
-  month = {October},
-  year = {2012},
-  issn = {0164-1212},
-  doi = {10.1016/j.jss.2012.02.018},
-  pages = {2228-2240},
-  volume = {85},
-  journal = {Journal of Systems and Software},
-  dmi-category = "jour",
-}
-
-@inproceedings{sefm2012-aeolus,
-  author = {Di Cosmo, Roberto and Stefano Zacchiroli and Zavattaro, Gianluigi},
-  title = {Towards a Formal Component Model for the Cloud},
-  abstract = {We consider the problem of deploying and (re)configuring resources in a "cloud" setting, where interconnected software components and services can be deployed on clusters of heterogeneous (virtual) machines that can be created and connected on-the-fly. We introduce the Aeolus component model to capture similar scenarii from realistic cloud deployments, and instrument automated planning of day-to-day activities such as software upgrade planning, service deployment, elastic scaling, etc. We formalize the model and characterize the feasibility and complexity of configuration achievability in Aeolus.},
-  publisher = {Springer-Verlag},
-  year = {2012},
-  doi = {10.1007/978-3-642-33826-7_11},
-  pages = {156-171},
-  series = {LNCS},
-  volume = {7504},
-  booktitle = {SEFM 2012: 10th International Conference on Software Engineering and Formal Methods},
-  dmi-category = "intc",
-}
-
-@inproceedings{DBLP:conf/icse/TianLL12,
-  author    = {Yuan Tian and
-               Julia L. Lawall and
-               David Lo},
-  title     = {Identifying Linux bug fixing patches},
-  booktitle = {ICSE},
-  year      = {2012},
-  pages     = {386-396},
-  ee        = {http://dx.doi.org/10.1109/ICSE.2012.6227176},
-  crossref  = {DBLP:conf/icse/2012},
-  bibsource = {DBLP, http://dblp.uni-trier.de},
-  dmi-category = "intc"
-}
-
 @proceedings{DBLP:conf/icse/2012,
   editor    = {Martin Glinz and
                Gail C. Murphy and
@@ -971,51 +916,6 @@ julia
   isbn      = {978-1-4673-1067-3},
   ee        = {http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6218989},
   bibsource = {DBLP, http://dblp.uni-trier.de}
-}
-
-@inproceedings{Bissyande:ASE12,
-  title = {Diagnosys: Automatic Generation of a Debugging Interface to the
-     {L}inux kernel},
-  author = {Tegawend\'e F. Bissyand\'e and Laurent R\'eveill\`ere and
-     Julia Lawall and Gilles Muller},
-  booktitle = {ASE},
-  address = {Essen, Germany},
-  month = sep,
-  year = 2012,
-  pages = {60--69},
-  dmi-category = "intc",
-}
-
-@inproceedings{Andersen:ASE12,
-  title = {Semantic Patch Inference},
-  author = {Jesper Andersen and Anh Cuong Nguyen and David Lo and
-    Julia L. Lawall and Siau-Cheng Khoo},
-  booktitle = {ASE},
-  address = {Essen, Germany},
-  month = sep,
-  year = 2012,
-  pages = {382--385},
-  dmi-category = "intc",
-}
-
-@Unpublished{garrigue-remy:gadts-ambivalence@ml2012,
-  author =       {Jacques Garrigue and Didier R{\'e}my},
-  title =        {Tracing ambiguity in GADT type inference},
-  note =         {Talk given at ACM SIGPLAN Workshop in Copenaghen}, 
-  month =     sep,
-  year =      2012,
-  url = "http://www.lexifi.com/ml2012/",
-  dmi-category = "talk"
-}
-
-@Unpublished{scherer-remy:gadts-subtyping@ml2012,
-  author =       {Gabriel Scherer and Didier R{\'e}my},
-  title =        {GADT meet subtyping},
-  note =         {Talk given at ACM SIGPLAN Workshop in Copenaghen}, 
-  month =     sep,
-  year =      2012,
-  url = "http://www.lexifi.com/ml2012/",
-  dmi-category = "talk"
 }
 
 @inproceedings{DBLP:conf/icfp/HenryMCM12,
@@ -1255,132 +1155,6 @@ pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
   dmi-category = "talk"
 }
 
-@inproceedings{DBLP:conf/icfp/HenryMCM12,
-  author    = {Gr{\'e}goire Henry and
-               Michel Mauny and
-               Emmanuel Chailloux and
-               Pascal Manoury},
-  title     = {Typing unmarshalling without marshalling types},
-  booktitle = {International Conference on Functional Programming},
-  year      = {2012},
-  pages     = {287-298},
-  ee        = {http://doi.acm.org/10.1145/2364527.2364569},
-  publisher = {ACM},
-  isbn      = {978-1-4503-1054-3},
-  bibsource = {DBLP, http://dblp.uni-trier.de}
-}
-
-@inproceedings{LIP69095,
-                    author = {Chailloux, Emmanuel and Serpette, Bernard},
-               x-lip6teams = {APR},
-                  x-lip6id = {9095},
-  x-international-audience = {no},
-                     month = jan,
-                     title = {{S}\'eparation des couleurs dans un lambda-calcul bichrome},
-                 booktitle = {{J}ourn\'ees {F}rancophones des {L}angages {A}pplicatifs},
-                      year = {2012},
-                     pages = {1-12},
-                       url = {http://hal.inria.fr/docs/00/66/59/58/PDF/paper_8.pdf},
-                  abstract = {Dans cet article nous introduisons un λ-calcul bichrome pour expliciter une partie de l'{\'{e}}valuation d'un terme en pr{\'{e}}cisant la localit{\'{e}} du calcul1. L'int{\'{e}}r{\^{e}}t est alors de pouvoir d{\'{e}}finir une transformation, par β-expansion, qui regroupe les expressions de m{\^{e}}me couleur. Les propri{\'{e}}t{\'{e}}s de correction, de terminaison et de confluence de cette transformation sont d{\'{e}}montr{\'{e}}es 'a l'aide de l'assistant de preuves Coq. Cette transformation est ind{\'{e}}pendante de la s{\'{e}}mantique de communication et de synchronisation de l'application. On s'int{\'{e}}resse alors aux applications utilisant deux unit{\'{e}}s de calcul comme les couples client-serveur de la programmation Web. Nous abordons le passage {\`{a}} un λ-calcul {\`{a}} plus de deux couleurs et montrons les difficult{\'{e}}s que cela engendre.}
-}
-
-@inproceedings{LIP69092,
-                    author = {Canou, Benjamin and Chailloux, Emmanuel and Vouillon, J{\'{e}}r{\^{o}}me},
-               x-lip6teams = {APR},
-                  x-lip6id = {9092},
-  x-international-audience = {yes},
-                     month = may,
-                     title = {{H}ow to {R}un your {F}avorite {L}anguage in {W}eb {B}rowsers},
-                 booktitle = {{I}nternational {W}orld {W}ide {W}eb {C}onference, dev track},
-                      year = {2012},
-                     pages = {1-4}
-}
-
-    
-@article{DBLP:journals/procedia/DaneluttoC12,
-  author    = {Marco Danelutto and
-               Roberto Di Cosmo},
-  title     = {A "Minimal Disruption" Skeleton Experiment: Seamless Map
-               {\&} Reduce Embedding in OCaml},
-  journal   = {Procedia CS},
-  volume    = {9},
-  year      = {2012},
-  pages     = {1837-1846},
-  ee        = {http://dx.doi.org/10.1016/j.procs.2012.04.202},
-  bibsource = {DBLP, http://dblp.uni-trier.de}
-}
-
-@inproceedings{DBLP:conf/msr/ArthoSCTZ12,
-  author    = {Cyrille Artho and
-               Kuniyasu Suzaki and
-               Roberto Di Cosmo and
-               Ralf Treinen and
-               Stefano Zacchiroli},
-  title     = {Why do software packages conflict?},
-  booktitle = {MSR},
-  year      = {2012},
-  pages     = {141-150},
-  ee        = {http://dx.doi.org/10.1109/MSR.2012.6224274},
-  crossref  = {DBLP:conf/msr/2012},
-  bibsource = {DBLP, http://dblp.uni-trier.de}
-}
-
-@proceedings{DBLP:conf/msr/2012,
-  editor    = {Michele Lanza and
-               Massimiliano Di Penta and
-               Tao Xi},
-  title     = {9th IEEE Working Conference on Mining Software Repositories,
-               MSR 2012, June 2-3, 2012, Zurich, Switzerland},
-  booktitle = {MSR},
-  publisher = {IEEE},
-  year      = {2012},
-  isbn      = {978-1-4673-1761-0},
-  ee        = {http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6220358},
-  bibsource = {DBLP, http://dblp.uni-trier.de}
-}
-
-@inproceedings{balat:hal-00691710,
-
-hal_id = {hal-00691710},
-
-url = {http://hal.archives-ouvertes.fr/hal-00691710},
-
-title = {{Client-server Web applications with Ocsigen}},
-
-author = {Balat, Vincent and Chambart, Pierre and Henry, Gr{\'e}goire},
-
-abstract = {{The Ocsigen framework offers a new way to develop sophisticated
-client-server Web applications. It makes it possible to write as a single
-program both the server and client sides of a Web application, thus simplifying
-a lot communications and data transfers, and avoiding code duplications. It
-also proposes a wide set of high level concepts to program traditional Web
-interactions in a very concise way while mixing them seamlessly with client
-side features. The use of a powerful type system improves a lot the reliability
-of programs, reducing debugging time, and making the code easier to
-maintain.}},
-
-keywords = {Web interaction, services, Continuation-based Web programming,
-Ajax, Javascript},
-
-language = {Anglais},
-
-affiliation = {Preuves, Programmes et Syst{\`e}mes - PPS},
-
-booktitle = {{WWW2012 dev track proceedings}},
-
-pages = {59},
-
-address = {Lyon, France},
-
-audience = {internationale },
-
-year = {2012},
-
-month = Apr,
-
-pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
-
-}
 
 @inproceedings{Balat:2013:CWA:2487788.2487795,
  author = {Balat, Vincent},
@@ -1471,13 +1245,11 @@ pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
   month =        mar,
   number =       7792,
   series =       lncs,
-  publisher =    springer,
 }
 
 @InProceedings{2013-Garrigue-Remy-aplas,
   author =       {Jacques Garrigue and Didier R{\'e}my},
-  title =        {Ambivalent Types for Principal Type Inference with
-                  {GAD
+  title =        {Ambivalent Types for Principal Type Inference with {GADT}},
   x-proceedings= "yes",
   x-international-audience= "yes",
   year =         2013,
@@ -1582,7 +1354,7 @@ pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
 
 @article{verdoolaege2014,
   title={Schedule Trees},
-  author={Verdoolaege, Sven, and Guelton, Serge and Grosser, Tobias and Cohen, Albert},
+  author={Verdoolaege, Sven and Guelton, Serge and Grosser, Tobias and Cohen, Albert},
   journal={IMPACT 2014 4th International Workshop on Polyhedral Compilation Techniques},
   year={2014}
 }
@@ -1654,4 +1426,19 @@ pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
   year      = {2014},
   url       = {http://dx.doi.org/10.1016/j.ic.2014.11.002},
   doi       = {10.1016/j.ic.2014.11.002},
+}
+
+@proceedings{DBLP:conf/kbse/2014,
+  editor    = {Ivica Crnkovic and
+               Marsha Chechik and
+               Paul Gr{\"{u}}nbacher},
+  title     = {{ACM/IEEE} International Conference on Automated Software Engineering,
+               {ASE} '14, Vasteras, Sweden - September 15 - 19, 2014},
+  year      = {2014},
+  publisher = {{ACM}},
+  url       = {http://dl.acm.org/citation.cfm?id=2642937},
+  isbn      = {978-1-4503-3013-8},
+  timestamp = {Wed, 15 Oct 2014 11:29:09 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/kbse/2014},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
