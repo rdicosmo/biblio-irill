@@ -1442,3 +1442,61 @@ pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/kbse/2014},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+
+@inproceedings{aeolus-icsoc-2015,
+  author = {Di Cosmo, Roberto and Antoine Eiche and Mauro, Jacopo and Stefano Zacchiroli and Zavattaro, Gianluigi and Zwolakowski, Jakub},
+  title = {Automatic Deployment of Services in the Cloud with Aeolus Blender},
+  abstract = {We present Aeolus Blender (Blender in the following), a software product for the automatic deployment and configuration of complex service-based, distributed software systems in the "cloud". By relying on a configuration optimiser and a deployment planner, Blender fully automates the deployment of real-life applications on OpenStack cloud deployments, by exploiting a knowledge base of software services provided by the Mandriva Armonic tool suite. The final deployment is guaranteed to satisfy not only user requirements and relevant software dependencies, but also to be optimal with respect to the number of used virtual machines.},
+  publisher = {Springer-Verlag},
+  year = {2015},
+  isbn = {978-3-662-48615-3},
+  doi = {10.1007/978-3-662-48616-0_28},
+  pages = {397-411},
+  booktitle = {ICSOC 2015: 13th International Conference on Service Oriented Computing},
+}
+
+@inproceedings{aeolus-concur-2015,
+  author = {Di Cosmo, Roberto and Lienhardt, Michael and Mauro, Jacopo and Stefano Zacchiroli and Zavattaro, Gianluigi and Zwolakowski, Jakub},
+  title = {Automatic Application Deployment in the Cloud: from Practice to Theory and Back},
+  abstract = {The problem of deploying a complex software application has been formally investigated in previous work by means of the abstract component model named Aeolus. As the problem turned out to be undecidable, simplified versions of the model were investigated in which decidability was restored by introducing limitations on the ways components are described. In this paper, we take an opposite approach, and investigate the possibility to address a relaxed version of the deployment problem without limiting the expressiveness of the component model. We identify three problems to be solved in sequence: (i) the verification of the existence of a final configuration in which all the constraints imposed by the single components are satisfied, (ii) the generation of a concrete configuration satisfying such constraints, and (iii) the synthesis of a plan to reach such a configuration possibly going through intermediary configurations that violate the non-functional constraints.},
+  publisher = {Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik},
+  year = {2015},
+  isbn = {978-3-939897-91-0},
+  doi = {10.4230/LIPIcs.CONCUR.2015.1},
+  pages = {1-16},
+  series = {Leibniz International Proceedings in Informatics (LIPIcs)},
+  volume = {42},
+  booktitle = {CONCUR 2015: 26th International Conference on Concurrency Theory},
+}
+
+@inproceedings{debsources-msr-2015,
+  author = {Stefano Zacchiroli},
+  title = {The Debsources Dataset: Two Decades of Debian Source Code Metadata},
+  abstract = {We present the Debsources Dataset: distribution metadata and source code metrics spanning two decades of Free and Open Source Software (FOSS) history, seen through the lens of the Debian distribution. Debsources is a software platform used to gather, search, and publish on the Web the full source code of the Debian operating system, as well as measures about it. A notable public instance of Debsources is available at http://sources.debian.net; it includes both current and historical releases of Debian. Plugins to compute popular source code metrics (lines of code, defined symbols, disk usage) and other derived data (e.g., checksums) have been written, integrated, and run on all the source code available on sources.debian.net. The Debsources Dataset is a PostgreSQL database dump of sources.debian.net metadata, as of February 10th, 2015. The dataset contains both Debian-specific metadataâ€”e.g., which software packages are available in which release, which source code file belong to which package, release dates, etc.â€”and source code information gathered by running Debsources plugins. The Debsources Dataset offer a very long-term historical view of the macro-level evolution and constitution of FOSS through the lens of popular, representative FOSS projects of their times.},
+  publisher = {IEEE},
+  year = {2015},
+  isbn = {ISBN 978-0-7695-5594-2},
+  doi = {10.1109/MSR.2015.65},
+  pages = {466-469},
+  booktitle = {MSR 2015: The 12th Working Conference on Mining Software Repositories},
+}
+
+@inproceedings{distcheck-msr-2015,
+  author = {Pietro Abate and Di Cosmo, Roberto and Louis Gesbert and Fabrice Le Fessant and Ralf Treinen and Stefano Zacchiroli},
+  title = {Mining Component Repositories for Installability Issues},
+  abstract = {Component repositories play an increasingly relevant role in software life-cycle management, from software distribution to end-user, to deployment and upgrade management. Software components shipped via such repositories are equipped with rich metadata that describe their relationship (e.g., dependencies and conflicts) with other components. In this practice paper we show how to use a tool, distcheck, that uses component metadata to identify all the components in a repository that cannot be installed (e.g., due to unsatisfiable dependencies), provides detailed information to help developers understanding the cause of the problem, and fix it in the repository. We report about detailed analyses of several repositories: the Debian distribution, the OPAM package collection, and Drupal modules. In each case, distcheck is able to efficiently identify not installable components and provide valuable explanations of the issues. Our experience provides solid ground for generalizing the use of distcheck to other component repositories.},
+  publisher = {IEEE},
+  year = {2015},
+  isbn = {ISBN 978-0-7695-5594-2},
+  doi = {10.1109/MSR.2015.10},
+  pages = {24-33},
+  booktitle = {MSR 2015: The 12th Working Conference on Mining Software Repositories},
+}
+
+@inproceedings{cudf-ocaml-2014,
+  author = {Pietro Abate and Di Cosmo, Roberto and Louis Gesbert and Fabrice Le Fessant and Stefano Zacchiroli},
+  title = {Using Preferences to Tame your Package Manager},
+  abstract = {Determining whether some components can be installed on a system is a complex problem: not only it is NP-complete in the worst case, but there can also be exponentially many solutions to it. Ordinary package managers use ad-hoc heuristics to solve this installation problem and choose a particular solution, making extremely difficult to change or sidestep these heuristics when the result is not the one we expect. When software repositories become complex enough, one gets vastly superior results by delegating dependency handling to a specialised solver, and use optimisation functions (or preferences) to control the class of solutions that are found. The opam package manager relies on the CUDF pivot format, which allows OCaml users that have a CUDF-compliant solver on their machine to reap the benefits of preferences-based dependency resolution. Thanks to the solver farm provided by Irill, these benefits are now extended to the OCaml community at large. In this talk we will present the preferences language and explain how to use it.},
+  year = {2014},
+  booktitle = {OCaml 2014: The OCaml Users and Developers Workshop},
+}
