@@ -1043,13 +1043,16 @@ month = Apr,
 
 pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
 
-}    @InProceedings{MPZN13,                                                                                               
-  author = {Morisset, Robin and Pawan, Pankaj and Zappa Nardelli, Francesco},                                        
-  title = {Compiler testing via a theory of sound optimisations in the {C}11/{C}++11 memory model},                  
-  booktitle = {Proc.\ PLDI},                                                                                         
-  year = {2013},                                                                                                     
-  publisher = {ACM}                                                                                                  
-} 
+}
+
+@InProceedings{MPZN13,
+  author = {Morisset, Robin and Pawan, Pankaj and Zappa Nardelli, Francesco},
+  title = {Compiler testing via a theory of sound optimisations in the {C}11/{C}++11 memory model},
+  booktitle = {Proc.\ PLDI},
+  year = {2013},
+  publisher = {ACM}
+}
+
 @inproceedings{cbse2012-futures,
   author = {Pietro Abate and Di Cosmo, Roberto and Ralf Treinen and Stefano Zacchiroli},
   title = {Learning from the Future of Component Repositories},
@@ -1499,4 +1502,107 @@ pdf = {http://hal.archives-ouvertes.fr/hal-00691710/PDF/www2012-ocsigen.pdf},
   abstract = {Determining whether some components can be installed on a system is a complex problem: not only it is NP-complete in the worst case, but there can also be exponentially many solutions to it. Ordinary package managers use ad-hoc heuristics to solve this installation problem and choose a particular solution, making extremely difficult to change or sidestep these heuristics when the result is not the one we expect. When software repositories become complex enough, one gets vastly superior results by delegating dependency handling to a specialised solver, and use optimisation functions (or preferences) to control the class of solutions that are found. The opam package manager relies on the CUDF pivot format, which allows OCaml users that have a CUDF-compliant solver on their machine to reap the benefits of preferences-based dependency resolution. Thanks to the solver farm provided by Irill, these benefits are now extended to the OCaml community at large. In this talk we will present the preferences language and explain how to use it.},
   year = {2014},
   booktitle = {OCaml 2014: The OCaml Users and Developers Workshop},
+}
+
+%%%% OCamlPro + Fabrice (INRIA) %%%%
+
+@inproceedings{lefessant:hal-01091175,
+  TITLE = {{A Case for Multi-Switch Constraints in OPAM}},
+  AUTHOR = {Le Fessant, Fabrice},
+  URL = {https://hal.inria.fr/hal-01091175},
+  BOOKTITLE = {{OCaml 2014}},
+  ADDRESS = {goteborg, Sweden},
+  YEAR = {2014},
+  MONTH = Sep,
+  PDF = {https://hal.inria.fr/hal-01091175/file/ocaml2014_12.pdf},
+  HAL_ID = {hal-01091175},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{couderc:hal-01091173,
+  TITLE = {{A Proposal for Non-Intrusive Namespaces in OCaml}},
+  AUTHOR = {Couderc, Pierrick and Canou, Benjamin and Chambart, Pierre and Le Fessant, Fabrice},
+  URL = {https://hal.inria.fr/hal-01091173},
+  BOOKTITLE = {{OCaml 2014}},
+  ADDRESS = {Goteborg, Sweden},
+  YEAR = {2014},
+  MONTH = Sep,
+  PDF = {https://hal.inria.fr/hal-01091173/file/ocaml2014_8.pdf},
+  HAL_ID = {hal-01091173},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{lefessant:hal-01245840,
+  TITLE = {{Towards A Debugger for Native-Code OCaml Applications}},
+  AUTHOR = {Le Fessant, Fabrice and Chambart, Pierre},
+  URL = {https://hal.inria.fr/hal-01245840},
+  BOOKTITLE = {{OCaml Users and Developers Workshop}},
+  ADDRESS = {Vancouver, Canada},
+  YEAR = {2015},
+  MONTH = Sep,
+  PDF = {https://hal.inria.fr/hal-01245840/file/main.pdf},
+  HAL_ID = {hal-01245840},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{chambart:hal-01245844,
+  TITLE = {{Operf: Benchmarking the OCaml Compiler}},
+  AUTHOR = {Chambart, Pierre and Laporte, Michael and Bernardoff, Vincent and Le Fessant, Fabrice},
+  URL = {https://hal.inria.fr/hal-01245844},
+  BOOKTITLE = {{OCaml Users and Developers Workshop}},
+  ADDRESS = {Vancouver, Canada},
+  YEAR = {2015},
+  MONTH = Sep,
+  PDF = {https://hal.inria.fr/hal-01245844/file/main.pdf},
+  HAL_ID = {hal-01245844},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{bozman:hal-01095305,
+  TITLE = {{Profiling the Memory Usage of OCaml Applications without Changing its Behavior}},
+  AUTHOR = {Bozman, {\c C}agdas and Mauny, Michel and Le Fessant, Fabrice and Gazagnaire, Thomas},
+  URL = {https://hal.inria.fr/hal-01095305},
+  BOOKTITLE = {{OCaml 2013}},
+  ADDRESS = {boston, United States},
+  YEAR = {2013},
+  MONTH = Sep,
+  PDF = {https://hal.inria.fr/hal-01095305/file/profiling-memory.pdf},
+  HAL_ID = {hal-01095305},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{bozman:hal-01099134,
+  TITLE = {{ocp-memprof: un profileur m{\'e}moire pour OCaml}},
+  AUTHOR = {Bozman, {\c C}agdas and Henry, Gr{\'e}goire and Iguernelala, Mohamed and Le Fessant, Fabrice and Mauny, Michel},
+  URL = {https://hal.inria.fr/hal-01099134},
+  BOOKTITLE = {{Vingt-sixi{\`e}mes Journ{\'e}es Francophones des Langages Applicatifs (JFLA 2015)}},
+  ADDRESS = {Le Val d'Ajol, France},
+  EDITOR = {David Baelde and Jade Alglave},
+  YEAR = {2015},
+  MONTH = Jan,
+  PDF = {https://hal.inria.fr/hal-01099134/file/jfla15_submission_22.pdf},
+  HAL_ID = {hal-01099134},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{lefessant:hal-00665962,
+  TITLE = {{Ocp-build: un gestionnaire de projets pour OCaml}},
+  AUTHOR = {Le Fessant, Fabrice and Gazagnaire, Thomas},
+  URL = {https://hal.inria.fr/hal-00665962},
+  BOOKTITLE = {{JFLA - Journ{\'e}es Francophones des Langages Applicatifs - 2012}},
+  ADDRESS = {Carnac, France},
+  YEAR = {2012},
+  MONTH = Feb,
+  PDF = {https://hal.inria.fr/hal-00665962/file/paper_10.pdf},
+  HAL_ID = {hal-00665962},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{couderc:tfp-20126,
+  TITLE = {{A Type Checker for Annotated OCaml Abstract Syntax Trees, or An Effective Type System for OCaml}},
+  AUTHOR = {Couderc, Pierrick and Mauny Michel and Henry, Gr{\'e}goire and Le Fessant, Fabrice and Mauny, Michel},
+  BOOKTITLE = {{The 17th Symposium on Trends in Functional Programming (FTP'2016)}},
+  ADDRESS = {University of Maryland, College Park, Maryland (US)},
+  YEAR = {2016},
+  MONTH = Jun,
 }
